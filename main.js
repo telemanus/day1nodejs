@@ -37,9 +37,11 @@ app.listen(3000,()=>{
     console.log('Application started on port 3000');
     console.log('\trunning directory is', __dirname);
     console.log('\tpublic directory is',path.join(__dirname, '/public'));
+    console.log('\trunning URL is', path);
+
 
 //Day 11 Worksheet question 5
-    console.log('type = ', typeof s);
-    console.log('What is s? \n\n', s);
+//    console.log('type = ', typeof s);
+//    console.log('What is s? \n\n', s);
 
 });
