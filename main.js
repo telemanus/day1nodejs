@@ -6,6 +6,9 @@ const express = require('express');
 //create an instance of Express
 const app = express();
 
+//Day 11 Worksheet question 5
+const s =     express.static(path.join(__dirname,'public'));
+
 //Can be defined anywhere in this file
 //Defined routes - rules to handle requests
 app.use(
@@ -23,7 +26,7 @@ app.use( express.static(path.join(__dirname,'images')));
 app.use(
     (req,res)=> {
         res.status(404);
-        res.sendfile(path.join(__dirname, 'images', '404oops.png'));
+        res.sendFile(path.join(__dirname, 'images', '404oops.png'));
     }
 );
 
@@ -34,4 +37,9 @@ app.listen(3000,()=>{
     console.log('Application started on port 3000');
     console.log('\trunning directory is', __dirname);
     console.log('\tpublic directory is',path.join(__dirname, '/public'));
+
+//Day 11 Worksheet question 5
+    console.log('type = ', typeof s);
+    console.log('What is s? \n\n', s);
+
 });
